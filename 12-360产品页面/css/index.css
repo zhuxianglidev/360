@@ -1,0 +1,219 @@
+  /* 注意：我们自己写的元素不是section的直接子元素，因为fullpage会帮我们再生成一个div，把我们写的东西包起来，所以弹性布局要加在这个生成的div上 
+        */
+
+
+.section{
+
+    overflow: hidden;
+}
+
+
+.section1>div {
+
+    display: flex;
+    /* y轴为主轴 */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section1 .text img{
+
+    margin-left: 40px;
+    opacity: .5;
+}
+
+
+.section1.animation .text img{
+
+    transition: all 1s;
+    margin-left: 0;
+    opacity: 1;
+}
+
+/* 第二屏开始 */
+.section2>div{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section2 .shield{
+
+    width:520px;
+}
+
+
+.section2 .shield>img:nth-child(3){
+
+    transform: translate(1000px,800px) rotate(600deg);
+}
+
+
+.section2.animation .shield>img:nth-child(3){
+
+    transition: all 1s;
+    transform: none;
+}
+
+/* 第三屏开始 */
+.section3>div{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section3 .circle{
+
+    width: 453px;
+    height: 449px;
+    background: url(../images/circle.png) no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 找到火箭 */
+.section3 .rocket{
+
+    transform: translate(-1000px,800px);
+}
+
+.section3.animation .rocket{
+
+    transition: all 1s;
+    transform: none;
+}
+
+
+/* 第四屏开始 */
+
+.section4>div{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.section4 .searchBox{
+
+    height: 438px;
+    transform: translate(-1000px);
+}
+
+
+.section4 .search{
+
+    background: url(../images/search.png) no-repeat;
+    width: 529px;
+    height: 66px;
+    position: relative;
+}
+
+.section4 .key{
+
+    background: url(../images/key.png) no-repeat;
+    /* width: 99px; */
+    width:0;
+    height: 22px;
+    position: absolute;
+    left:20px;
+    top:22px;
+}
+
+
+.section4 .result{
+
+    background: url(../images/result.png) no-repeat;
+    width: 529px;
+    /* height: 372px; */
+    height:0;
+}
+
+
+.section4.animation .searchBox{
+
+    transition: all 1s;
+    transform: none;
+}
+
+.section4.animation .key{
+
+    transition: all 1s 1s steps(5);
+    width: 99px;
+}
+
+.section4.animation .result{
+
+    transition: all 1s 2s;
+    height: 372px;
+}
+
+
+/* 第五屏开始 */
+.section5>div{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.section5 .browserBox{
+    width:1004px;
+    flex:1;
+
+    position: relative;
+}
+
+.section5 .extra{
+
+    position: absolute;
+
+    bottom: 3px;
+    right:0;
+}
+
+.border{
+
+    background-color: white;
+    position: absolute;
+}
+
+.top{
+
+    width: 100%;
+    height: 5px;
+    transform: translate(-1200px);
+}
+
+.bottom{
+    width: 100%;
+    height: 5px;
+    bottom: 3px;
+    transform: translate(1200px);
+}
+
+.left{
+    width: 5px;
+    height: 99.5%;
+    transform: translateY(1200px);
+}
+
+.right{
+    width: 5px;
+    height: 99.5%;
+    right:0;
+
+    transform: translateY(-1200px);
+}
+
+
+.section5.animation .border{
+    transition: all 1s;
+    transform: none;
+}

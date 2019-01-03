@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 
+        使用三步骤：
+                1.导入文件
+                        fullpage.css  jquery.js  fullpage.js
+                        注意：fullpage一定要导入在jQuery的后面，因为它是基于jQuery的插件
+
+                2.准备HTML
+                        一个大的div，里面包n个小div，小div的类要叫section，有几个这样的小div，就有几屏
+                
+                3.调用初始化代码,所有插件的初始化代码和它的插件名是一样的
+
+     -->
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+
+    <link rel="stylesheet" href="css/jquery.fullpage.min.css">
+
+
+
+
+</head>
+
+<body>
+
+    <div id="itcast">
+
+        <div class="section">
+            <h3>第一屏</h3>
+        </div>
+
+        <div class="section">
+            <h3>第二屏</h3>
+        </div>
+
+        <div class="section active">
+            <h3>第三屏</h3>
+        </div>
+
+        <div class="section">
+            <h3>第四屏</h3>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    // 意思就是把大div的内容变成可以滚屏的全屏页面
+    $('#itcast').fullpage({
+
+        navigation:true,
+        // 设置每一屏的背景颜色,第一个元素对应第一屏，这样一一对应
+        sectionsColor: ['#f00','yellow','blue','hotpink']
+    });
+
+</script>
